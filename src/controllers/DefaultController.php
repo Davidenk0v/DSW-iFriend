@@ -2,9 +2,12 @@
 
 namespace Dsw\Ifriend\Controllers;
 
-class DefaultController {
+class DefaultController
+{
 
-  public function index() {
-    echo "Estoy en Index";
+  public function index()
+  {
+    global $blade;
+    echo $blade->make('index')->render();
   }
 }
