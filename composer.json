@@ -1,0 +1,21 @@
+{
+    "name": "dsw/ifriend",
+    "description": "App que simula que tienes amigos",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Dsw\\Ifriend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David Álvarez",
+            "email": "davidalvper@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^10.40",
+        "jenssegers/blade": "^2.0",
+        "altorouter/altorouter": "^2.0"
+    }
+}
