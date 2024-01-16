@@ -13,9 +13,7 @@ class UserController {
     global $blade;
     echo $blade->make('index')->render();
     echo "Estoy en user controller";
-    echo "<pre>
-    ($users);
-    </pre>";
+    echo "<pre>($users) </pre>";
   
   }
 }
