@@ -8,9 +8,7 @@
 </head>
 
 <body>
-  @for ($i = 0; $i < 7; $i++)
   <h1>Estoy en la pagina de inicio</h1>
-  @endfor
 </body>
 
 </html>
