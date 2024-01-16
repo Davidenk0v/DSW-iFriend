@@ -11,9 +11,6 @@ class UserController {
   public function index() {
     $users = User::all();
     global $blade;
-    echo $blade->make('index')->render();
-    echo "Estoy en user controller";
-    echo "<pre>($users) </pre>";
-  
+    echo $blade->make('user.list', compact("users"))->render();
   }
 }
