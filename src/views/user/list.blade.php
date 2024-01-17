@@ -23,8 +23,8 @@
         <td>{{$user->created_at}}</td>
         <td>{{$user->updated_at}}</td>
         <td>
+          <a class="btn btn-danger" href="{{$router->generate('user_delete', ["id" => $user->id])}}" class="btn btn-warning">Eliminar</a>
           <a class="btn btn-warning" href="#">Modificar</a>
-          <a class="btn btn-danger" href="#">Eliminar</a>
         </td>
       </tr>
     @empty
