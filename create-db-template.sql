@@ -1,3 +1,0 @@
--- Active: 1700591600066@@localhost@3306
-CREATE DATABASE ifriend
-    DEFAULT CHARACTER SET = 'utf8mb4';
