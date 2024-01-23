@@ -1,6 +1,6 @@
 @extends("layouts.master")
 
-@section("title", "Lista de usuarios")
+@section("title", "Crear nuevo usuario")
 
 @section("content")
 <form method="post" action="{{$router->generate('user_post')}}">
