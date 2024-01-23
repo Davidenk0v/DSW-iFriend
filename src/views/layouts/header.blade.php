@@ -1,4 +1,4 @@
-<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{$router->generate('index')}}">iFriend</a>
     <a class="navbar-brand" href="{{$router->generate('user')}}">Usuarios</a>
