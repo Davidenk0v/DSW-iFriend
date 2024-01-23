@@ -30,8 +30,31 @@ class UserController extends Controller
     echo $this->blade->make('user.create_form', compact('router'))->render();
   }
 
-  public function post($params)
+  public function post()
   {
-    var_dump($params);
+    //Hay que validar los datos antes de añadirlos
+    $user = new User;
+    $user->name = $_POST['name'];
+    $user->password = $_POST['password'];
+    $user->mail = $_POST['email'];
+    $user->save();
+    header('Location: /user');
+  }
+  public function edit($params)
+  {
+    $id = $params['id'];
+    $router = $this->router;
+    $user = User::find($id);
+    echo $this->blade->make('user.update_form', compact('router', 'user'))->render();
+  }
+
+  public function update()
+  {
+    $user = User::find($_POST['id']);
+    $user->name = $_POST['name'];
+    $user->password = $_POST['password'];
+    $user->mail = $_POST['email'];
+    $user->save();
+    header('Location: /user');
   }
 }
