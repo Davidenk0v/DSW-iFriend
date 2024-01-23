@@ -11,8 +11,15 @@ class loginController extends Controller
 
   public function validate()
   {
-    $_SESSION['id'] = 1;
-    $_SESSION['user'] = 'pepe';
+    $user = User::where([
+      ['name', $_POST['user']],
+      ['password', $_POST['password']],
+    ])->first();
+    
+    if($user) {
+      $_SESSION['id'] = $user->id;
+      $_SESSION['user'] = $user->name;
+    }
     header("Location: /");
   }
   public function logout()
