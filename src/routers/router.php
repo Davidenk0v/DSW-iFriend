@@ -16,4 +16,7 @@ if (isset($_SESSION['id'])) {
 
   $router->map('GET', '/game', 'GameController#index', 'game');
   $router->map('POST', '/game', 'GameController#post', 'game_post');
+
+  $router->map('GET', '/usergame', 'UserGameController#index', 'usergame');
+  
 }
