@@ -4,10 +4,7 @@
 
 @section("content")
 <div class="d-flex flex-row-reverse">
-  <form method="post" action="{{$router->generate('game_post')}}">
-    <input type=" " class="form-control" id="input_name" name="name" placeholder="Introduce el nombre de la partida...">
-    <input type="submit" value="Crear Partida" class="btn btn-primary">
-  </form>
+  <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-controller"></i> Crear Partida</a>
 </div>
 <table class="table table-striped">
   <thead>
@@ -41,6 +38,25 @@
   </tbody>
 </table>
 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Crear Partida</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="form-floating" method="post" action="{{$router->generate('game_post')}}">
+          <input type="text" class="form-control" name="name" id="floatingInput" placeholder="Nombre de la partida">
+          <label for="floatingInput">Nombre de la partida</label>
+          <div class="d-flex flex-row-reverse">
+            <input type="submit" value="Crear" class="m-2 btn btn-primary">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 @endsection
 
