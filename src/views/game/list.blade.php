@@ -4,7 +4,7 @@
 
 @section("content")
 <div class="d-flex flex-row-reverse">
-  {{-- <a class="btn btn-primary" href="{{$router->generate('game_create')}}"><i class="bi bi-person-plus-fill"></i> Crear Partida</a> --}}
+  <a class="btn btn-primary" href="{{$router->generate('game_create')}}"><i class="bi bi-person-plus-fill"></i> Crear Partida</a>
 </div>
 <table class="table table-striped">
   <thead>

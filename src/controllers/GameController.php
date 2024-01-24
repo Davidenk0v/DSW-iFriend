@@ -15,4 +15,9 @@ class GameController extends Controller
     echo $this->blade->make('game.list', compact("games", "router"))->render();
   }
 
+  public function create()
+  {
+    $router = $this->router;
+    echo $this->blade->make('game.create_form', compact('router'))->render();
+  }
 }

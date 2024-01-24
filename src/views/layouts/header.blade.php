@@ -3,6 +3,7 @@
     <a class="navbar-brand" href="{{$router->generate('index')}}">iFriend</a>
     @isset($_SESSION['id'])
     <a class="navbar-brand" href="{{$router->generate('user')}}">Usuarios</a>
+    <a class="navbar-brand" href="{{$router->generate('game')}}">Games</a>
     @endisset
     if(@isset($_SESSION['id']))
     <span>{{$_SESSION['user']}}</span>
