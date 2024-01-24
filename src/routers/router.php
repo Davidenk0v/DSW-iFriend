@@ -13,5 +13,7 @@ if(isset($_SESSION['id'])){
   $router->map('GET', '/user/[i:id]/edit', 'UserController#edit', 'user_edit');
   $router->map('POST', '/user/update', 'UserController#update', 'user_update');
   
+  
+  $router->map('GET', '/game', 'GameController#index', 'game');
 }
 
