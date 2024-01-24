@@ -4,7 +4,10 @@
 
 @section("content")
 <div class="d-flex flex-row-reverse">
-  <a class="btn btn-primary" href="{{$router->generate('game_create')}}"><i class="bi bi-person-plus-fill"></i> Crear Partida</a>
+  <form method="post" action="{{$router->generate('game_post')}}">
+    <input type=" " class="form-control" id="input_name" name="name" placeholder="Introduce el nombre de la partida...">
+    <input type="submit" value="Crear Partida" class="btn btn-primary">
+  </form>
 </div>
 <table class="table table-striped">
   <thead>

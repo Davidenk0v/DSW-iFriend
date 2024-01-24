@@ -20,4 +20,13 @@ class GameController extends Controller
     $router = $this->router;
     echo $this->blade->make('game.create_form', compact('router'))->render();
   }
+  public function post()
+  {
+    //Hay que validar los datos antes de añadirlos
+    $games = new Game;
+    $games->name = $_POST['name'];
+    $games->id_admin = $_SESSION['id'];
+    $games->save();
+    header('Location: /game');
+  }
 }
