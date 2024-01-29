@@ -18,9 +18,12 @@ class UserController extends Controller
 
   public function delete($params)
   {
+
     $id = $params['id'];
     $user = User::find($id);
-    $user->delete();
+    if ($user) {
+      $user->delete();
+    }
     header('Location: /user');
   }
 

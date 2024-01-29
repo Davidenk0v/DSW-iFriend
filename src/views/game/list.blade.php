@@ -26,8 +26,8 @@
         <td>{{$game->created_at}}</td>
         <td>{{$game->updated_at}}</td>
         <td>
-          {{-- <a class="btn btn-warning" href="{{$router->generate('game_edit', ["id" => $game->id])}}"><i class="bi bi-pencil-fill"></i></a> --}}
-          {{-- <a class="btn btn-danger" href="{{$router->generate('game_delete', ["id" => $game->id])}}"><i class="bi bi-trash-fill"></i></a> --}}
+          <a class="btn btn-warning" href="{{$router->generate('game_edit', ["id" => $game->id])}}"><i class="bi bi-pencil-fill"></i></a> 
+          <a class="btn btn-danger" href="{{$router->generate('game_delete', ["id" => $game->id])}}"><i class="bi bi-trash-fill"></i></a>
         </td>
       </tr>
     @empty
